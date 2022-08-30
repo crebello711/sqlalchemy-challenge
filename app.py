@@ -120,9 +120,6 @@ def start(start):
     return jsonify(temp)
 
 
-
-
-
 @app.route('/api/v1.0/<start>/<stop>')
 def start_stop(start,stop):
     session=Session(engine)
