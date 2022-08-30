@@ -4,6 +4,7 @@ import numpy as np
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
+import datetime as dt
 from sqlalchemy import create_engine, func
 
 # import Flask
@@ -22,6 +23,8 @@ Base.prepare(engine, reflect=True)
 Measurement = Base.classes.measurement
 Station = Base.classes.station
 
+#globally define variables
+query_date = dt.date(2017,8,23) - dt.timedelta(days=365)
 
 # Create an app, being sure to pass __name__
 app = Flask(__name__)
@@ -79,6 +82,41 @@ def stations():
         stn.append(stn_dict)
     return jsonify(stn)
 
+
+@app.route('/api/v1.0/tobs')
+def tobs():
+    session=Session(engine)
+    #Convert the query results to a dictionary using date as the key and prcp as the value.
+  
+    query_results = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= query_date).all()
+    session.close()
+
+    tb =[]
+    for date,tobs in query_results:
+        tb_dict={}
+        tb_dict["Date"]=date
+        tb_dict["Temperature Observation"]=tobs
+
+        tb.append(tb_dict)
+    return jsonify(tb)
+
+
+@app.route('/api/v1.0/<start>')
+def start(start):
+    session=Session(engine)
+    #Convert the query results to a dictionary using date as the key and prcp as the value.
+  
+    query_results = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= query_date).all()
+    session.close()
+
+    tb =[]
+    for date,tobs in query_results:
+        tb_dict={}
+        tb_dict["Date"]=date
+        tb_dict["Temperature_Observation"]=tobs
+
+        tb.append(tb_dict)
+    return jsonify(tb)
 
 
 if __name__ == "__main__":
