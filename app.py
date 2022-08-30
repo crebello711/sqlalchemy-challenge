@@ -30,8 +30,6 @@ query_date = dt.date(2017,8,23) - dt.timedelta(days=365)
 app = Flask(__name__)
 
 
-
-
 # Define what to do when a user hits the index route
 @app.route("/")
 def home():
