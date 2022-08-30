@@ -105,19 +105,45 @@ def tobs():
 def start(start):
     session=Session(engine)
     #Convert the query results to a dictionary using date as the key and prcp as the value.
-  
-    query_results = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= query_date).all()
+    sel=[func.min(Measurement.tobs), func.max(Measurement.tobs),func.avg(Measurement.tobs)]
+    
+    query_results = session.query(*sel).filter(Measurement.date >= start).all()
     session.close()
 
-    tb =[]
-    for date,tobs in query_results:
-        tb_dict={}
-        tb_dict["Date"]=date
-        tb_dict["Temperature_Observation"]=tobs
+    temp=[]
+    for min,max,avg in query_results:
+        temp_dict={}
+        temp_dict["Minimum Temperature"]=min
+        temp_dict["Maximum Temperature"]=max
+        temp_dict["Average Temperature"]=avg
 
-        tb.append(tb_dict)
-    return jsonify(tb)
 
+        temp.append(temp_dict)
+    return jsonify(temp)
+
+
+
+
+
+@app.route('/api/v1.0/<start>/<stop>')
+def start_stop(start,stop):
+    session=Session(engine)
+    #Convert the query results to a dictionary using date as the key and prcp as the value.
+    sel=[func.min(Measurement.tobs), func.max(Measurement.tobs),func.avg(Measurement.tobs)]
+    
+    query_results = session.query(*sel).filter(Measurement.date >= start).filter(Measurement.date <= stop).all()
+    session.close()
+
+    tempSS=[]
+    for min,max,avg in query_results:
+        tempSS_dict={}
+        tempSS_dict["Minimum Temperature"]=min
+        tempSS_dict["Maximum Temperature"]=max
+        tempSS_dict["Average Temperature"]=avg
+
+
+        tempSS.append(tempSS_dict)
+    return jsonify(tempSS)
 
 if __name__ == "__main__":
     app.run(debug=True)
