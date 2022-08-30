@@ -48,16 +48,37 @@ def home():
 def precipitation():
     session=Session(engine)
     #Convert the query results to a dictionary using date as the key and prcp as the value.
-    query_reuslts = session.query(Measurement.date,Measurement.prcp).all()
+    query_results = session.query(Measurement.date,Measurement.prcp).all()
     session.close()
 
     prcp_date =[]
-    for date,prcp in query_reuslts:
+    for date,prcp in query_results:
         prcp_dict={}
         prcp_dict["Date"]=date
         prcp_dict["Precipitation"]=prcp
         prcp_date.append(prcp_dict)
     return jsonify(prcp_date)
+
+
+@app.route('/api/v1.0/stations')
+def stations():
+    session=Session(engine)
+    #Convert the query results to a dictionary using date as the key and prcp as the value.
+    query_results = session.query(Station.id,Station.station,Station.name,Station.latitude,Station.longitude,Station.elevation).all()
+    session.close()
+
+    stn =[]
+    for id,station,name,latitude,longitude,elevation in query_results:
+        stn_dict={}
+        stn_dict["Id"]=id
+        stn_dict["Station"]=station
+        stn_dict["Name"]=name
+        stn_dict["Latitude"]=latitude
+        stn_dict["Longitude"]=longitude
+        stn_dict["Elevation"]=elevation
+        stn.append(stn_dict)
+    return jsonify(stn)
+
 
 
 if __name__ == "__main__":
