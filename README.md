@@ -3,16 +3,16 @@
 ### Part 1: Climate Analysis and Exploration
 In this section, you’ll use Python and SQLAlchemy to perform basic climate analysis and data exploration of your climate database. Complete the following tasks by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete climate analysis and data exploration.
+* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources) files to complete climate analysis and data exploration.
 
 #### Precipitation Analysis
-     ![precipitation](Images/precipitation.png)
+     ![precipitation](Images/PrecipitationScore.png)
  
 #### Station Analysis
 
     * Plot the results as a histogram with `bins=12`, as shown in the following image:
 
-    ![station-histogram](Images/station-histogram.png)
+    ![station-histogram](Images/Histogram.png)
     
     
 ### Part 2: Design Your Climate App
