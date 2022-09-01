@@ -6,7 +6,7 @@ In this section, you’ll use Python and SQLAlchemy to perform basic climate ana
 * Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources) files to complete climate analysis and data exploration.
 
 #### Precipitation Analysis
-     ![precipitation](https://github.com/crebello711/sqlalchemy-challenge/Images/PrecipitationScore.png)
+     ![precipitation](https://github.com/crebello711/sqlalchemy-challenge/blob/main/Images/Histogram.png)
  
 #### Station Analysis
 
