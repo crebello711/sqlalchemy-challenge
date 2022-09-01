@@ -29,6 +29,7 @@ List all available routes.
 
 
 ```Question``` :Use the t-test to determine whether the difference in means, if any, is statistically significant. Will you use a paired t-test or an unpaired t-test? Why?
+
 ```Answer``` 
 * I will use the t-test to determine if the average temperatures between June and December are statistically significantly different. Will use the unpaired t-test   because I am comparing means from separate groups by month that are not dependent on each other.
 
