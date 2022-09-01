@@ -23,7 +23,7 @@ List all available routes.
 * `/api/v1.0/tobs`
 * `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
 
-* Use the provided [app.py](app.py)
+* Use the provided [app.py](app.py) to review the script created for all the above routes
 
 ### Bonus: Other Recommended Analyses
 
