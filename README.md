@@ -35,6 +35,7 @@ List all available routes.
   ```Answer```  :I have used the t-test to determine if the average temperatures between June and December are statistically significantly different. I used the unpaired t-test because I am comparing means from separate groups by month that are not dependent on each other.
 
 * H0: The difference between the mean temperatures of June and December is equal to zero
+
   H1: The difference between the mean temperatures of June and June and December is NOT equal to zero 
 
 * ```Ttest_indResult(statistic=-4.615865424404701, pvalue=0.00028626292761018595)```
