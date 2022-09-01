@@ -6,11 +6,14 @@ In this section, you’ll use Python and SQLAlchemy to perform basic climate ana
 * Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources) files to complete climate analysis and data exploration.
 
 #### Precipitation Analysis
+
+Precipitation score from "2016-08-23" to "2017-08-23"
+
 ![precipitation](Images/PrecipitationScore.png)
  
 #### Station Analysis
 
-* Design a query to retrieve the previous 12 months of temperature observation data (TOBS) and plot histogram:
+* Design a query to retrieve the previous 12 months of temperature observation data (TOBS) and plot histogram: 
 
 ![station-histogram](Images/Histogram.png)
     
