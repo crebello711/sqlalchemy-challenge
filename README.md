@@ -6,13 +6,13 @@ In this section, you’ll use Python and SQLAlchemy to perform basic climate ana
 * Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources) files to complete climate analysis and data exploration.
 
 #### Precipitation Analysis
-     ![precipitation](https://github.com/crebello711/sqlalchemy-challenge/blob/main/Images/Histogram.png)
+![precipitation](https://github.com/crebello711/sqlalchemy-challenge/blob/main/Images/Histogram.png)
  
 #### Station Analysis
 
-    * Plot the results as a histogram with `bins=12`, as shown in the following image:
+* Plot the results as a histogram with `bins=12`, as shown in the following image:
 
-    ![station-histogram](Images/Histogram.png)
+![station-histogram](Images/Histogram.png)
     
     
 ### Part 2: Design Your Climate App
