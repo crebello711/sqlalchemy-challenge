@@ -24,4 +24,7 @@ List all available routes.
 * `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
 
 ### Bonus: Other Recommended Analyses
-#### Temperature Analysis 1
+
+#### Temperature Analysis 
+![temperatureDufference](Images/Bonus_boxPlot.png)
+
