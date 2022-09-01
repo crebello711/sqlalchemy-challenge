@@ -10,7 +10,7 @@ In this section, you’ll use Python and SQLAlchemy to perform basic climate ana
  
 #### Station Analysis
 
-* Plot the results as a histogram with `bins=12`, as shown in the following image:
+* Design a query to retrieve the previous 12 months of temperature observation data (TOBS) and plot histogram:
 
 ![station-histogram](Images/Histogram.png)
     
