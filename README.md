@@ -27,7 +27,7 @@ List all available routes.
 
 ### Bonus: Other Recommended Analyses
 
-#### Temperature Analysis 
+#### Temperature Analysis - 1
 * Use the provided [temp_analysis_bonus_1_starter.ipynb](temp_analysis_bonus_1_starter.py) to review updated code.
 
 * ```Question``` :Use the t-test to determine whether the difference in means, if any, is statistically significant. Will you use a paired t-test or an unpaired t-test? Why?
